@@ -1,4 +1,4 @@
-package org.jikesrvm.openjdk6.java.lang;
+package openjdk6.java.lang;
 
 import org.jikesrvm.runtime.Time;
 import org.vmmagic.pragma.ReplaceClass;
