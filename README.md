@@ -3,7 +3,7 @@ This project contains the replacement classes needed to load an OpenJDK6 contain
 
 ## Usage ##
 1. Compile a copy of JikesRVM with the OpenJDKContainer option enabled
-2. Create a JAR containing the classes found in `src/`
+2. Compile `jikes-openjdk6.jar` using ant (`ant build`)
 3. Locate `classes.jar` in your local OpenJDK6 distribution
 4. Execute the RVM: `rvm -X:openJDKClasses=classes.jar:jikes-openjdk6.jar ClassToRunInContainer`
 

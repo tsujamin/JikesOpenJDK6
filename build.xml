@@ -1,0 +1,21 @@
+<project>
+    <property name="jikes.basedir"  value="../JikesRVM"/>
+    <property name="jikes.dist"     value="BaseBaseImmix_x86_64-osx"/>
+    <property name="jikes.jar"      value="${jikes.basedir}/dist/${jikes.dist}/jksvm.jar"/>
+
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="bin/classes"/>
+        <javac target="1.6" source="1.6" srcdir="src" destdir="bin/classes" classpath="${jikes.jar}" includeantruntime="false"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="bin/jar"/>
+        <jar destfile="bin/jar/jikes-openjdk6.jar" basedir="bin/classes"/>
+    </target>
+
+    <target name="build" depends="jar"/>
+</project>
