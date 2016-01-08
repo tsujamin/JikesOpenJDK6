@@ -1,9 +1,6 @@
 package openjdk6.java.lang;
 
-import java.io.BufferedOutputStream;
-import java.io.FileDescriptor;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
+import java.util.Properties;
 
 import org.jikesrvm.VM;
 import org.jikesrvm.classloader.Atom;
@@ -43,5 +40,10 @@ public class System {
 	@ReplaceMember
 	public static long currentTimeMillis() {
 		return Time.currentTimeMillis();
+	}
+	
+	@ReplaceMember
+    private static Properties initProperties(Properties props) {
+		return null;
 	}
 }

@@ -7,5 +7,10 @@ import org.vmmagic.pragma.ReplaceMember;
 public class Class {
 	@ReplaceMember
 	private void registerNatives() {}
+	
+	@ReplaceMember 
+	static java.lang.Class getPrimitiveClass(String name) {
+		return null;
+	}
 
 }
